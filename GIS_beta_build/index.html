@@ -1,0 +1,245 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<!--Soporte para caracteres utf-8 Acentos-->
+    <meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1' />
+	<meta charset="utf-8">
+  
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		 Remove this if you use the .htaccess -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+	<title>Mapa Interactivo - Ciudad de Quilpu&eacute; GIS</title>
+	<meta name="description" content="Mapa Interactivo - Corporacion Municipal de Quilpu&eacute;">
+	<meta name="author" content="Autor ">
+	
+	<!-- Allow all robots -->	
+	<meta content="all" name="robots" />
+	
+	<!-- turn off IE image toolbar -->
+    <meta content="no" http-equiv="imagetoolbar" />
+  
+	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+	<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+	<!-- These two lines only for use with Leaflet backend - remove if not needed -->
+	<link rel="stylesheet" href="js/libs/leaflet/leaflet.css" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="js/libs/leaflet/leaflet.ie.css" /><![endif]-->
+
+	<!-- jQuery UI CSS -->
+	<link type="text/css" media="all" href="tema/muni/css/custom-theme/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
+	
+	<!-- CSS: implied media="all" -->
+	<link rel="stylesheet" href="css/style.css">
+  
+	<!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects
+		Note this modernizr build only contains HTML5 shim/iepp, modernizr.load, add css classes, and
+		geolocation api. You can build your own with additional features at http://www.modernizr.com/ -->
+	<script src="js/libs/modernizr.custom.js"></script>
+
+</head>
+
+<body>
+	<div id="container">
+		<header>
+			<div id="searchdiv" class="ui-widget-header ui-widget-header ui-corner-all alignleft screen-only boxshadow">
+				<label for="searchinput">Buscar:</label>
+				<input id="address" class="ui-corner-all" placeholder="Ingrese Su Búsqueda" />
+				<input type="button" id="search" value="Buscar" />
+				<span title="Ayuda del buscador">
+					<img id="interrogacion" src="img/interrogacion.gif"/>
+				</span>				
+			</div>
+			<div id="header-logo" class="alignright"><img src="img/gp_logo.png" alt="Logo" /></div>
+		</header>
+	
+		<div id="main" role="main">
+		
+		<!-- side bar -->   
+		<aside>
+			<div id="left-tabs"  class="boxshadow hidden">
+				<ul> 
+					<li><a href="#tabs-data">Bienvenida</a></li> 
+					<li><a href="#tabs-map">Mapa</a></li>
+				</ul>
+				
+				<!-- Data Tab -->
+				<div id="tabs-data">
+				   
+					<!-- Data Accordion -->
+					<div id="accordion-data" class="accordion">
+						<h3 id="WELCOME"><a href="#">Bienvenida</a></h3>
+						<div>                       
+							<h5 class="aligncenter">Bienvenido al Mapa Interactivo</h5>
+							<p>El Mapa Interactivo de la Ciudad de Quilpué, es un lugar creado con la intención de ayudar a la comunidad a conocer un poco más de su ciudad,
+							mostrando información de los establecimientos de Educación y Salud Municipales</p> <p>Este Sitio está desarrollado totalmente con tecnologias OpenSource para
+							<a href="http://cmq.cl" target="_blank"> La Corporación Municipal de Quilpué.</a></p>
+					
+							<p class="gpslocation hidden"><img src="img/target-icon.png" alt="Where am I?" /><a href="javascript:void(0)" id="gogpslocation">Conocer Mi Ubicación</a></p>
+							
+						
+						</div>
+						<!--<h3 id="TRANSPORTATION"><a href="#">Educación</a></h3>
+						<div>
+							<h5>Seleccione Opcion:</h5>
+						<br>
+
+						</div>
+						<h3 id="SERVICES"><a href="#">Salud</a></h3>
+						<div>
+							<h5>Seleccione Opcion:</h5>
+						</div> -->
+							
+					</div>
+				</div>
+				
+				<!-- Map Tab -->
+				<div id="tabs-map">
+					<!-- Map Accordion -->
+					<div id="accordion-map" class="accordion">
+						<h3 id="MAPCONTROLS"><a href="#">Controles del Mapa</a></h3>
+						<div>
+							<h5>Capas del Mapa</h5>
+						<tr><td>
+							<p>
+								
+							</p>
+							<p id="tickets">
+								<span class="sprite" style="background-position:-96px 0;"></span>		<input type="checkbox" id="carabineros" onclick="boxclick(this,'carabineros')" /> Carabineros<br>
+								<span class="sprite" style="background-position:-32px -32px;"></span>	<input type="checkbox" id="bomberos" onclick="boxclick(this,'bomberos')" /> Bomberos<br>
+								<span class="sprite" style="background-position:0 0;"></span>			<input type="checkbox" id="salud" onclick="boxclick(this,'salud')" /> Establecimientos de Salud<br>
+								<span class="sprite" style="background-position:-128px -32px;"></span>	<input type="checkbox" id="servicios" onclick="boxclick(this,'servicios')" /> Servicios Públicos<br>
+								<span class="sprite" style="background-position:-128px -32px;"></span>	<input type="checkbox" id="colegios" onclick="boxclick(this,'colegios')" /> Establecimientos Educacionales
+							</p>
+							<hr size="2"  />
+						</td></tr>							
+							
+							<div id="layerswitcher"></div>
+								<!--<h5 class="opacityControl">Transparencia: </h5>-->
+							<div id="lalala" style="visibility:hidden"> <select id="opacitydll" class="opacityControl"></select>  </div>
+							<!--<div id="opacitySlider" class="opacityControl"></div>
+							<span id="layerOpacity" class="alignright opacityControl">Opacidad: 50%</span>-->
+					</div>
+						<h3 id="LEGEND"><a href="#">Simbología</a></h3>
+						<div>
+							<img src="img/simbologia.png" />
+						</div>
+						
+							<h3 id="LEGEND"><a href="#">Resultados Búsqueda</a></h3>
+						<div>
+							<div id="sidebar" style="position:absolute; top:5px; left: 10px; width:280px; height:340px; overflow:auto;"> </div>							
+									<br>
+						<br>
+						<br>
+						<br>
+						<br>	
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>	
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>						
+						</div>
+					</div>
+				</div>
+				   
+			</div>          
+		</aside>
+		
+		<!-- Map and toolbar -->
+		<div id="map-container" class="ui-widget-content ui-corner-all boxshadow">
+			<div id="toolbar" class="screen-only ui-widget-header ui-corner-top hidden">
+				<div id="mapcontrols">
+					<input type="radio" id="navigate" name="mapcontrol-button" value="none" checked="checked" /><label for="navigate">Navegar</label>
+					<input type="radio" id="measure" name="mapcontrol-button" value="measure" /><label for="measure">Medir</label>
+				</div>
+									
+				
+				<div id="toolbar-text-output" class="alignright textright">
+					<span id="toolbar-area"></span>
+					<span id="toolbar-length"></span>
+					<br />
+					<span id="toolbar-coords"></span>
+				</div>
+			</div>
+			<div id="map" class="ui-corner-bottom"></div>
+		</div>
+		 
+		 
+		</div>
+		<footer>
+			<div class="alignright smallfont" id="footer-text">
+				<a href="http://www.cmq.cl" title="GeoPortal"> Desarrollado para Corporaci&oacute;n Municipal de Qulpu&eacute;</a>
+			</div>
+		</footer>
+	
+	</div> <!--! end of #container -->
+
+
+	<!-- JavaScript at the bottom for fast page loading -->
+  
+	<!-- Grab Google CDN's jQuery and jQuery UI -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.15/jquery-ui.min.js"></script>
+	
+	<!-- Map configuration file -->
+	<script src="js/config.js"></script>
+	
+	<!-- Scripts for leaflet maps -->
+	<!--<script src="js/libs/leaflet/leaflet.js"></script>
+	<script src="js/map-leaflet.js"></script>-->
+	
+	<!-- Scripts for openlayers map -->
+	<!--<script src="http://openlayers.org/api/OpenLayers.js"></script>
+	<script src="js/map-ol.js"></script>-->
+	
+	<!-- Scripts for google maps -->
+	<script src="http://maps.google.com/maps/api/js?v=3.6&sensor=false&libraries=geometry,panoramio"></script>
+	<script src="js/map-gm.js"></script>
+    <script src="separado.js"></script>
+	<script src="toggle-cats.js"></script>
+	
+	 
+	<!-- scripts concatenated and minified via ant build script-->
+	<script src="js/plugins.js"></script>
+	<script src="js/script.js"></script>
+	
+	<!-- end scripts-->
+
+
+	<!-- The following content is not displayed at run time -->
+     
+	<!-- Welcome screen - jQuery UI Dialog -->
+	<div id="search-dialog" title="Ayuda del Mapa Interactivo" class="hidden">
+		<p>
+		Para visualizar nuestro Manual de Usuario haga click 
+		<a href="http://localhost/wiki/" target="_blank">aquí</a>.
+		</p>
+		
+	</div>
+     
+
+</body>
+</html>

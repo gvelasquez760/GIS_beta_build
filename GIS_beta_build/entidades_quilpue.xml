@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<markers>
+
+<marker nr="m1" name="Primera Compañia de Bomberos Quilpué " info="Bomberos de Chile es una organización sin fines de lucro, con el propósito de prestar servicios a toda la comunidad" web="http://www.primeraquilpue.cl/" logo="img/lugares/logo_bomberos1.png" lat="-33.043205" lng="-71.438456" category="bomberos" />
+
+<marker nr="m2" name="Segunda Compañia de Bomberos Quilpué " info="Bomberos de Chile es una organización sin fines de lucro, con el propósito de prestar servicios a toda la comunidad" web="http://www.cmq.cl/" logo="img/lugares/logo_bomberos2.png" lat="-33.049348" lng="-71.443053" category="bomberos" />
+
+<marker nr="m3" name="Tercera Compañia de Bomberos Quilpué " info="Bomberos de Chile es una organización sin fines de lucro, con el propósito de prestar servicios a toda la comunidad" web="http://www.cmq.cl/" logo="img/lugares/logo_bomberos3.png" lat="-33.033708" lng="-71.439314" category="bomberos" />
+
+<marker nr="m4" name="Cuarta Compañia de Bomberos Quilpué " info="Bomberos de Chile es una organización sin fines de lucro, con el propósito de prestar servicios a toda la comunidad" web="http://www.bombabelloto.cl/" logo="img/lugares/logo_bomberos4.png" lat="-33.035435" lng="-71.410475" category="bomberos" />
+
+<marker nr="m5" name="Quinta Compañia de Bomberos Quilpué " info="Bomberos de Chile es una organización sin fines de lucro, con el propósito de prestar servicios a toda la comunidad" web="http://www.cmq.cl/" logo="img/lugares/logo_bomberos5.png" lat="-33.068312" lng="-71.420159" category="bomberos" />
+
+<marker nr="m6" name="Carabineros de Chile " info="Bomberos de Chile es una organización sin fines de lucro, con el propósito de prestar servicios a toda la comunidad" web="http://www.carabineros.cl/" logo="img/lugares/logo_carabineros.gif" lat="-33.055413 lng=" lng="-71.438857" category="carabineros" />
+
+<marker nr="m7" name="Municipalidad de Quilpué " info="Ilustre Municipalidad de Quilpué" web="http://www.quilpue.cl/" logo="img/lugares/logo_municipal.png" lat="-33.045863" lng="-71.44493" category="servicios" />
+
+<marker nr="m8" name="Corporación Municipal de Quilpué " info="Corporación Municipal de Quilpué" web="http://www.cmq.cl/" logo="img/lugares/logo_cmq.png" lat="-33.044779" lng="-71.44023" category="servicios" />
+
+<marker nr="m9" name="Hospital de Quilpué " info="Un servicio de salud de calidad para toda la comunidad" web="http://www.hospitalquilpue.cl/" logo="img/lugares/logo_hospital.jpg" lat="-33.052091" lng="-71.433495" category="salud" />
+
+<marker nr="m10" name="Liceo Guillermo Gronemeyer" info="Colegio Municipal para toda la comunidad" web="http://cmq.eged.cl/est/colegio_guillermo_gronemeyer.10" logo="img/lugares/logo_gronemeyer.png" lat="-33.049699" lng="-71.436628" category="colegios" />
+
+<marker nr="m11" name="Liceo Alejandro Lubet Vergara" info="Colegio Municipal para toda la comunidad" web="http://cmq.eged.cl/est/liceo_alejandro_lubet_vergara.30" logo="img/lugares/logo_lubet.png" lat="-33.045382" lng="-71.439528" category="colegios" />
+
+<marker nr="m12" name="Colegio Ignacio Carrera Pinto" info="Colegio Municipal para toda la comunidad" web="http://cmq.eged.cl/est/colegio_ignacio_carrera_pinto.28" logo="img/lugares/logo_carrerapinto.png" lat="-33.036451" lng="-71.431326" category="colegios" />
+
+<marker nr="m13" name="Colegio GuardiaMarina Guillermo Zañartu Irigoyen" info="Colegio Municipal para toda la comunidad" web="http://cmq.eged.cl/est/colegio_guardiamarina_guillermo_zanartu_irigoyen.5" logo="img/lugares/logo_guardamarina.png" lat="-33.043889" lng="-71.410428" category="colegios" />
+
+<marker nr="m14" name="Colegio Comandante Eleuterio Ramírez" info="Colegio Municipal para toda la comunidad" web="http://cmq.eged.cl/est/colegio_comandante_eleuterio_ramirez.17" logo="img/lugares/logo_eramirez.png" lat="-33.058615" lng="-71.424636" category="colegios" />
+
+<marker nr="m15" name="Colegio Fernando Durán Villareal" info="Colegio Municipal para toda la comunidad" web="http://cmq.eged.cl/est/colegio_fernando_duran_villareal.20" logo="img/lugares/logo_duran.png" lat="-33.046277" lng="-71.450514" category="colegios" />
+
+<marker nr="m16" name="Colegio Jose Miguel Infante" info="Colegio Municipal para toda la comunidad" web="http://cmq.eged.cl/est/colegio_jose_miguel_infante.11" logo="img/lugares/logo_infante.png" lat="-33.0361" lng="-71.441303" category="colegios" />
+
+<marker nr="m16" name="Colegio Jorge Rock Lara" info="Colegio Municipal para toda la comunidad" web="http://cmq.eged.cl/est/colegio_jorge_rock_lara.13" logo="img/lugares/logo_rlara.png" lat="-33.043889" lng="-71.470388" category="colegios" />
+
+<marker nr="m16" name="Colegio Gaspar Cabrales" info="Colegio Municipal para toda la comunidad" web="http://cmq.eged.cl/est/colegio_gaspar_cabrales.27" logo="img/lugares/logo_gcabrera.png" lat="-33.057477" lng="-71.411017" category="colegios" />
+
+<marker nr="m16" name="Colegio Andrés Bello López" info="Colegio Municipal para toda la comunidad" web="http://cmq.eged.cl/est/colegio_andres_bello.21" logo="img/lugares/logo_blopez.png" lat="-33.048745" lng="-71.403603" category="colegios" />
+
+<marker nr="m16" name="Centro de Educación Integrada de Adultos" info="Colegio Municipal para toda la comunidad" web="http://cmq.eged.cl/est/centro_de_educacion_integrada_de_adultos_ceia.19" logo="img/lugares/logo_ceia.png" lat="-33.043646" lng="-71.428552" category="colegios" />
+
+<marker nr="m16" name="Liceo Técnico Profesional Mannheim" info="Colegio Municipal para toda la comunidad" web="http://cmq.eged.cl/est/liceo_tecnico_profesional_mannheim.24" logo="img/lugares/logo_mann.png" lat="-33.037733" lng="-71.48394" category="colegios" />
+
+<marker nr="m16" name="Colegio Luis Cruz MartInez" info="Colegio Municipal para toda la comunidad" web="http://cmq.eged.cl/est/colegio_luis_cruz_martinez.26" logo="img/lugares/logo_cmartinez.png" lat="-33.037818" lng="-71.404815" category="colegios" />
+
+<marker nr="m16" name="Escuela Teniente Serrano" info="Colegio Municipal para toda la comunidad" web="http://cmq.eged.cl/est/escuela_teniente_serrano.3" logo="img/lugares/logo_tserrano.png" lat="-33.069894" lng="-71.412893" category="colegios" />
+
+<marker nr="m16" name="Colegio Theodor Heuss" info="Colegio Municipal para toda la comunidad" web="http://cmq.eged.cl/est/colegio_theodor_heuss_.18" logo="img/lugares/logo_theuss.png" lat="-33.051834" lng="-71.467873" category="colegios" />
+
+<marker nr="m16" name="Escuela especial de desarrollo Renacimiento" info="Colegio Municipal para toda la comunidad" web="http://cmq.eged.cl/est/escuela_especial_de_desarrollo_renacimiento.2" logo="img/lugares/logo_especial.png" lat="-33.055962" lng="-71.434211" category="colegios" />
+
+<marker nr="m16" name="Liceo de Gastronomia y Turismo" info="Colegio Municipal para toda la comunidad" web="http://cmq.eged.cl/est/liceo_de_gastronomia_y_turismo.31" logo="img/lugares/logo_gturismo.png" lat="-33.048116" lng="-71.421659" category="colegios" />
+
+</markers>
